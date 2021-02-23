@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+nav {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkgrey;
+}
+
+nav div {
+    display: flex;
+    margin: 0 0 0 20px; 
+}
+
+nav img:nth-child(1) {
+    display: none;
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+nav img:nth-child(2) {
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav li {
+    background-color: darkkhaki;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+nav li:hover {
+    background-color: darkblue;
+    border: 2px solid whitesmoke;
+    padding: 10px;
+    margin: 0 5px;
+    color: darkgray;
+}
+
+@media screen and (max-width : 768px) {
+
+
+    nav img:nth-child(1) {
+        display: inherit;
+    }
+
+    nav img:nth-child(2) {
+        display: none;
+    }
+
+    nav {
+        background-color: transparent;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    nav div {
+        z-index: 500;
+        background-color: darkgray;
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 24px 0;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    nav h2 {
+        display: none;
+    }
+
+    nav ul {
+        z-index: 1;
+        width: 100%;
+        list-style: none;
+        flex-direction: column;
+        align-self: center;
+        padding: 10px 30px;
+        background-color: darkgray;
+        display: none;
+       
+    }
+}
+
+@keyframes slideIn {
+    from {
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+/* @keyframes slideInLeft {
+    from {
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+} */
+  
+  
+  
+@keyframes slideOut {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        visibility: hidden;
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+
+
